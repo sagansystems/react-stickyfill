@@ -59,6 +59,7 @@ export default class Sticker extends Component {
 			window && window.removeEventListener('resize', this.handleResize);
 		}
 		this.unsticky(this.stick);
+		Stickyfill.pause();
 	}
 	componentWillReceiveProps(nextProps){
 		if(nextProps.forceUpdate !== this.props.forceUpdate){
